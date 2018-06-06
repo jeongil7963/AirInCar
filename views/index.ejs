@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		<%= title %> 캡스톤 디자인 2 </title>
+	<!-- 부트스트랩 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">자동차 실내 공기 오염 문제 해결을 위한 사물인터넷</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" placeholder="Email" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="password" placeholder="Password" class="form-control">
+					</div>
+					<button type="submit" class="btn btn-success">Sign in</button>
+				</form>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<iframe width="370" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/dzCYf7TUNuEFFRgOWoxQrAgYbcc"></iframe>
+	   	<iframe width="370" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/Q_0GrjhbwZoD3t0s8PIhjRzVyUQ"></iframe>
+			<iframe width="370" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/TGVQDSUtrVd-dFHCGb--Fz1MwUA"></iframe>
+		</div>
+	</div>
+
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-md-4">
+				<iframe width="130" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/yfsRrnc1gU-3xCzsHX_WhSAx8OA"></iframe>
+				<iframe width="220" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/u7_Ad5j2bdx6pEhxcV51-5uRri4"></iframe>
+			</div>
+			<div class="col-md-4">
+				<iframe width="130" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/EVM_df6wV16PE3e2GkVq3rtBoUc"></iframe>
+				<iframe width="220" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/L04_-HBnUWI6H_174xCUdX8Ykls"></iframe>
+			</div>
+			<div class="col-md-4">
+				<iframe width="370" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/5polvLKnVqeA6GowQn0Zd9kDBQk"></iframe>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-4">
+				<iframe width="370" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/GizEReXx_4PGQ3MZcUMew6C2lzQ"></iframe>
+			</div>
+			<div class="col-md-4">
+				<iframe width="370" height="280" frameborder="0" src="https://industrial.ubidots.com/ubi/getchart/2vibWlbernrE9DoNtYkNRn5f41w"></iframe>
+			</div>
+			<div class="col-md-4">
+				<img id="img1" width="370" height="280" src="/images/img.jpg">
+			</div>
+		</div>
+
+		<hr>
+		<footer>
+			<p>&copy; 경희대 컴퓨터공학과 양정일</p>
+		</footer>
+	</div>
+	<!-- /container -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			function change_img (){
+				var date = new Date();
+				$("#img1").attr("src","images/img.jpg?" + date.getTime() );
+			}
+			setInterval(change_img,3000);
+		});
+	</script>
+</body>
+
+</html>
